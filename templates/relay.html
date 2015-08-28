@@ -1,38 +1,33 @@
 <head>
-        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'>
-</script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 </head>
 
-<h1>THIS IS A WORKING TEMPLATE</h2>
-<p> See!? </p>
+<h1>Control Relays</h2>
 
-Form shit:
 <div title = relay>
-<form action="" method="post" class = "relay">
+  <form action="" method="post" class = "relay">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
-</form>
+  </form>
 </div>
 
 <script type='text/javascript'>
 
- $(document).ready(function() {
-   $('input[name=relay_one]').change(function(){
-        $('form').submit();
-   });
+//Make radio buttons submit form whenever clicked
+
+ $(document).ready(function(){
+  $('input[name=relay_one]').change(function(){
+        $('form').submit();});
 
    $('input[name=relay_two]').change(function(){
-        $('form').submit();
-   });
+        $('form').submit();});
 
    $('input[name=relay_three]').change(function(){
-        $('form').submit();
-   });
+        $('form').submit();});
 
    $('input[name=relay_four]').change(function(){
-        $('form').submit();
-   });
+        $('form').submit();});
   });
 
 </script>
