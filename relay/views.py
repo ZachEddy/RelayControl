@@ -8,8 +8,7 @@ relay_one = 8
 relay_two = 10
 relay_three = 12
 relay_four = 16 #pin 14 is ground, so pin 16 instead
-relay_dict = {'relay_one':relay_one, 'relay_two':relay_two, 'relay_three':relay_three}
-
+relay_dict = {'relay_one':relay_one, 'relay_two':relay_two, 'relay_three':relay_three, 'relay_four':relay_four}
 
 # delcare pin numbers for current relay states (which relays are on?)
 relay_one_initial = 18
