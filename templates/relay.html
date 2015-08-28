@@ -1,33 +1,34 @@
-<head>
-  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-</head>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+<link rel="stylesheet" type="text/css" href="{% static 'relay/style.css' %}" />
 
-<h1>Control Relays</h2>
 
-<div title = relay>
-  <form action="" method="post" class = "relay">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
-  </form>
-</div>
+{% block content %}
+    <h1>Relay Control</h2>
+      <div class="container" id="content" tabindex="-1">
+        <div title = relay>
+          <form action="" method="post" class = "relay">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
 
-<script type='text/javascript'>
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        $('input[name=relay_one]').change(function(){
+            $('form').submit();});
 
-//Make radio buttons submit form whenever clicked
+        $('input[name=relay_two]').change(function(){
+            $('form').submit();});
 
- $(document).ready(function(){
-  $('input[name=relay_one]').change(function(){
-        $('form').submit();});
+        $('input[name=relay_three]').change(function(){
+            $('form').submit();});
 
-   $('input[name=relay_two]').change(function(){
-        $('form').submit();});
-
-   $('input[name=relay_three]').change(function(){
-        $('form').submit();});
-
-   $('input[name=relay_four]').change(function(){
-        $('form').submit();});
-  });
-
-</script>
+        $('input[name=relay_four]').change(function(){
+            $('form').submit();});
+      });
+    </script>
+{% endblock content %}

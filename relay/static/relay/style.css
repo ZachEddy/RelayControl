@@ -1,0 +1,21 @@
+/*input[type=radio] {
+    display: none;
+}
+input[type=radio] + label::before {
+    content: '';
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 0.5em;
+}
+
+.radio4 + label::before {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+body
+{
+	background-image: url("geometry2.png");
+  
+}*/
