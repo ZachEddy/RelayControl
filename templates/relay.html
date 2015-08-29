@@ -1,12 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load bootstrap3 %}
-<link rel="stylesheet" type="text/css" href="{% static 'relay/style.css' %}" />
-
-
 {% block content %}
-    <h1>Relay Control</h2>
       <div class="container" id="content" tabindex="-1">
+        <h1>Relay Control</h2>
         <div title = relay>
           <form action="" method="post" class = "relay">
             {% csrf_token %}
